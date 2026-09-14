@@ -1,0 +1,44 @@
+# pocknix-deckstation-x86_64.install
+# Hooks de instalación para el paquete (versión x86_64 / PC)
+
+post_install() {
+    echo ""
+    echo "=========================================="
+    echo "  Pocknix DeckStation x86_64 instalado!"
+    echo "  (PC / Steam Deck)"
+    echo "=========================================="
+    echo ""
+    echo "Directorio: /opt/deckstation/"
+    echo ""
+    echo "Siguiente paso: colocar los emuladores en /opt/deckstation/Apps/"
+    echo "(se descargan o copian aparte; NO van en el repo por tamaño)"
+    echo ""
+    echo "Para lanzar:"
+    echo "  deckstation"
+    echo ""
+    echo "Extras disponibles:"
+    echo "  - Updater (launcher.sh): gestiona actualizaciones"
+    echo "  - compresorKSM.sh: comprime ROMs"
+    echo "  - mapeador.py: mapeo de mandos"
+    echo ""
+    echo "Documentación: /opt/deckstation/docs/"
+    echo "=========================================="
+}
+
+post_upgrade() {
+    echo ""
+    echo "=========================================="
+    echo "  Pocknix DeckStation x86_64 actualizado!"
+    echo "=========================================="
+    echo ""
+    echo "Tus configs y saves se mantienen intactos."
+    echo ""
+}
+
+pre_remove() {
+    echo ""
+    echo "Nota: Los emuladores en /opt/deckstation/Apps/, los saves,"
+    echo "Media y ROMs NO se eliminan. Para limpiar manualmente:"
+    echo "  sudo rm -rf /opt/deckstation/"
+    echo ""
+}

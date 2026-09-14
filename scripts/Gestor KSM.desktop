@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Gestor KSM
+Comment=Arrastra archivos o carpetas (.pc / .wsquashfs) aquí
+Exec=konsole -e "/run/media/fransis/8TB/DeckStation/compresorKSM.sh" %U
+Icon=utilities-file-archiver
+Type=Application
+Terminal=false

@@ -1,0 +1,4 @@
+#!/bin/bash
+# Pocknix DeckStation x86_64 Launcher
+# Todo el contenido está en /opt/deckstation/
+exec /opt/deckstation/scripts/DeckStation.sh "$@"

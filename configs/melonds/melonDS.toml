@@ -1,0 +1,250 @@
+LastBIOSFolder = "."
+FastForwardFPS = 1000.0
+PauseLostFocus = false
+SlowmoFPS = 30.0
+MaxFPS = 1000
+TargetFPS = 60.0
+RecentROM = [
+"./ROMs/nds/Ghost Trick Phantom Detective.7z|Ghost Trick Phantom Detective.nds",
+]
+UITheme = ""
+LastROMFolder = "./ROMS/nds/"
+AudioSync = false
+LimitFPS = true
+
+[Gdb]
+Enabled = false
+
+[MP]
+AudioMode = 1
+RecvTimeout = 25
+
+[DSi]
+BIOS9Path = ""
+NANDPath = ""
+BIOS7Path = ""
+FirmwarePath = ""
+FullBIOSBoot = false
+
+[DSi.Camera0]
+InputType = 0
+XFlip = false
+ImagePath = ""
+DeviceName = ""
+
+[DSi.Camera1]
+InputType = 0
+XFlip = false
+ImagePath = ""
+DeviceName = ""
+
+[DSi.SD]
+Enable = false
+ImageSize = 0
+ImagePath = "dsisd.bin"
+ReadOnly = false
+FolderSync = false
+FolderPath = ""
+
+[Audio]
+Interpolation = 0
+BitDepth = 0
+
+[LAN]
+DirectMode = false
+
+[Mic]
+InputType = 1
+Device = "Filter Chain Source"
+WavPath = ""
+
+[Mouse]
+Hide = false
+HideSeconds = 5
+
+[Savestate]
+RelocSRAM = true
+
+[Emu]
+ConsoleType = 0
+DirectBoot = true
+ExternalBIOSEnable = true
+
+[DLDI]
+Enable = false
+ImageSize = 0
+ImagePath = "dldi.bin"
+ReadOnly = false
+FolderSync = false
+FolderPath = ""
+
+[3D]
+Renderer = 1
+
+[3D.Soft]
+Threaded = true
+
+[3D.GL]
+HiresCoordinates = true
+ScaleFactor = 3
+BetterPolygons = false
+
+[Instance0]
+CheatFilePath = ""
+SaveFilePath = ""
+EnableCheats = false
+JoystickID = 0
+SavestatePath = ""
+
+[Instance0.Gdb]
+Enabled = false
+
+[Instance0.Gdb.ARM7]
+Port = 3334
+BreakOnStartup = false
+
+[Instance0.Gdb.ARM9]
+Port = 3333
+BreakOnStartup = false
+
+[Instance0.Window1]
+Enabled = false
+
+[Instance0.Firmware]
+MAC = ""
+Message = ""
+OverrideSettings = false
+Username = "melonDS"
+Language = 5
+BirthdayMonth = 1
+BirthdayDay = 1
+FavouriteColour = 0
+
+[Instance0.DSi]
+FullBIOSBoot = false
+
+[Instance0.DSi.Battery]
+Level = 15
+Charging = true
+
+[Instance0.Window2]
+Enabled = false
+
+[Instance0.Keyboard]
+HK_SolarSensorIncrease = -1
+HK_Mic = -1
+X = -1
+Up = -1
+HK_FrameLimitToggle = -1
+HK_SlowMoToggle = -1
+HK_FrameStep = -1
+Y = -1
+HK_VolumeDown = -1
+HK_GuitarGripBlue = -1
+HK_FastForward = -1
+A = -1
+HK_SwapScreens = -1
+Left = -1
+HK_GuitarGripRed = -1
+L = -1
+R = -1
+HK_FullscreenToggle = -1
+HK_SlowMo = -1
+HK_FastForwardToggle = -1
+HK_Pause = -1
+Right = -1
+Start = -1
+Select = -1
+HK_SwapScreenEmphasis = -1
+HK_PowerButton = -1
+HK_Reset = -1
+Down = -1
+B = -1
+HK_Lid = -1
+HK_SolarSensorDecrease = -1
+HK_VolumeUp = -1
+HK_GuitarGripGreen = -1
+HK_GuitarGripYellow = -1
+
+[Instance0.Joystick]
+HK_SolarSensorIncrease = 68288511
+HK_Mic = 10
+X = 3
+Up = 257
+HK_FrameLimitToggle = -1
+HK_SlowMoToggle = -1
+HK_FrameStep = -1
+Y = 2
+HK_VolumeDown = -1
+HK_GuitarGripBlue = -1
+HK_FastForward = -1
+A = 1
+HK_SwapScreens = 86114303
+Left = 264
+HK_GuitarGripRed = -1
+L = 4
+R = 5
+HK_FullscreenToggle = 35782655
+HK_SlowMo = -1
+HK_FastForwardToggle = -1
+HK_Pause = -1
+Right = 258
+Start = 7
+Select = 6
+HK_SwapScreenEmphasis = -1
+HK_PowerButton = -1
+HK_Reset = -1
+Down = 260
+B = 0
+HK_Lid = -1
+HK_SolarSensorDecrease = 67239935
+HK_VolumeUp = -1
+HK_GuitarGripGreen = -1
+HK_GuitarGripYellow = -1
+
+[Instance0.RTC]
+Offset = 0
+
+[Instance0.DS]
+[Instance0.DS.Battery]
+LevelOkay = true
+
+[Instance0.Window0]
+ScreenRotation = 0
+ScreenAspectBot = 0
+ScreenGap = 0
+ScreenLayout = 2
+Geometry = "AdnQywADAAAAAAAAAAAAAAAABP8AAAMfAAAAAAAAAAAAAAT/AAADHwAAAAAAAAAABQAAAAAAAAAAAAAABP8AAAMf"
+ScreenSwap = false
+ScreenSizing = 0
+IntegerScaling = false
+ScreenAspectTop = 0
+ShowOSD = true
+ScreenFilter = false
+Enabled = true
+
+[Instance0.Window3]
+Enabled = false
+
+[Instance0.Audio]
+Volume = 256
+DSiVolumeSync = false
+
+[JIT]
+Enable = true
+MaxBlockSize = 32
+BranchOptimisations = true
+LiteralOptimisations = true
+FastMemory = true
+
+[Screen]
+Filter = true
+UseGL = false
+VSync = false
+VSyncInterval = 1
+
+[DS]
+BIOS9Path = "./bios9.bin"
+BIOS7Path = "./bios7.bin"
+FirmwarePath = "./firmware.bin"
+

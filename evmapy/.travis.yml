@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.3"
+  - "3.4"
+install:
+  - pip install evdev
+  - pip install pep8
+  - pip install pylint
+  - pip install coveralls
+script:
+  - coverage run --source=evmapy setup.py test
+  - pep8 evmapy tests
+  - pylint evmapy tests
+  - coverage report --fail-under=100
+after_success:
+  - coveralls

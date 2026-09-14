@@ -1,0 +1,88 @@
+# ============================================================
+# Pocknix DeckStation x86_64 — .gitignore
+# Los binarios grandes NO van en git (ROMs, Media, KSM, Apps)
+# ============================================================
+
+# AppImages y binarios de emuladores
+*.AppImage
+*.AppImage.home
+Apps/
+Paks/
+
+# ROMs (contenido del usuario)
+ROMs/
+ROMS/
+ROMs.bak/
+*.rom
+*.iso
+*.bin
+*.chd
+*.cso
+*.7z
+*.zip
+*.tar.gz
+*.tar.xz
+
+# Media / bezels / squashfs (binarios grandes)
+Media/
+bezels/
+wsquashfs/
+*.squashfs
+
+# Saves del usuario (privados)
+saves/
+Saves/
+ScreenShots/
+Screenshots/
+settings/Emulator_saves/
+
+# Logs (generados en runtime)
+logs/
+Logs/
+update.log
+error.txt
+
+# Python portable y caches
+libs_py3.*/
+libs_py3.13/
+libs_py3.14/
+python_portable/
+__pycache__/
+*.pyc
+*.pyo
+
+# Binarios del sistema (mksquashfs, squashfuse, etc.)
+fuse-overlayfs
+mksquashfs
+squashfuse
+unsquashfs
+
+# OpenROM (binario)
+OpenROM-*/
+
+# ES-DE: assets pesados (se regeneran)
+configs/es-de/downloaded_media/
+configs/es-de/gamelists/
+configs/es-de/themes/
+configs/es-de/logs/
+
+# Build artifacts de pacman
+*.pkg.tar.*
+src/
+pkg/
+
+# Temporales
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+tmp/
+*.pid
+*.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
