@@ -1,18 +1,21 @@
-# Pocknix DeckStation x86_64
+# DeckStation x86_64
 
-**Sistema de emulación portable para arquitectura x86_64 (PC / Steam Deck) — integrado en Pocknix**
+**Sistema de emulación portable para arquitectura x86_64 (PC / Steam Deck)**
 
-> ⚠️ **Este es el proyecto DeckStation x86_64 (PC)**, la versión original y más completa.
-> Existe una versión hermana para **ARM** (aarch64/armv7h) en
-> `arcadematicas/pocknix-deckstation`. No confundir: este repo es SOLO para x86_64.
+> **DeckStation** es un proyecto independiente de emulación portable.
+> Creado por **stshunz** — https://github.com/stshunz
+> Esta es la versión original (x86_64) y más completa.
 
 ---
 
 ## ¿Qué es?
 
-Pocknix DeckStation x86_64 es el sistema de emulación portable original, diseñado
-para PC y Steam Deck. Incluye un sistema de actualización propio, gestión de ROMs,
-mapeo de mandos avanzado y configuraciones para más de 20 emuladores.
+DeckStation x86_64 es el sistema de emulación portable original, diseñado para PC
+y Steam Deck. Incluye un sistema de actualización propio, gestión de ROMs, mapeo de
+mandos avanzado y configuraciones para más de 20 emuladores.
+
+Es un proyecto **independiente de cualquier sistema operativo**: no depende de
+ninguna distribución concreta y todo queda autocontenido en su propia carpeta.
 
 ## Filosofía
 
@@ -22,59 +25,38 @@ mapeo de mandos avanzado y configuraciones para más de 20 emuladores.
 - **Sin dependencias del sistema**: Se auto-descarga todo lo necesario
 - **Modular**: Cada emulador es independiente
 
-## Arquitecturas soportadas
+## Arquitecturas
 
 | Arquitectura | Estado |
 |---|---|
 | **x86_64** | ✅ Este repo — versión original y más completa |
-| **aarch64 (ARM64)** | ❌ Ver repo `arcadematicas/pocknix-deckstation` |
-| **armv7h (ARM32)** | ❌ Ver repo ARM |
+| **aarch64 (ARM64)** | ❌ Ver repo `deckstation-arm` |
+| **armv7h (ARM32)** | ❌ Ver repo `deckstation-arm` |
 
 ## Estructura del repo
 
 ```
-pocknix-deckstation-x86_64/        # ← SOLO x86_64
-├── README.md                      # Este archivo
-├── .gitignore                     # Qué ignorar
-├── PKGBUILD                       # Paquete Arch Linux (x86_64)
-├── pocknix-deckstation-x86_64.install
-├── scripts/                       # Scripts del sistema
-│   ├── DeckStation.sh             # Launcher portable
-│   ├── launcher.sh                # Launcher multi-python (Updater)
-│   ├── mapeador.py                # Mapeador de mandos
-│   ├── selector_manual.py         # Selector manual
-│   ├── compresorKSM.sh            # Compresor de ROMs (KSM)
-│   ├── PortProton_wsquashfs.sh    # Wrapper wsquashfs para PortProton
-│   ├── run_squashfs_wrapper.sh    # Wrapper squashfs
-│   └── Gestor KSM.desktop         # Acceso directo al gestor KSM
-├── evmapy/                        # Mapeo de mandos (evmapy)
-├── configs/                       # Configs portable de emuladores
-│   ├── es-de/                     #   ES-DE: custom_systems/, settings/, scrapers/
-│   ├── retroarch/                 #   retroarch.cfg + config/ (92 sistemas)
-│   ├── duckstation/               #   Configs por emulador
-│   ├── pcsx2/
-│   ├── ppsspp/
-│   ├── dolphin/
-│   ├── citron/
-│   ├── azahar/
-│   ├── flycast/
-│   ├── melonds/
-│   ├── mgba/
-│   ├── mame/
-│   ├── rpcs3/
-│   ├── scummvm/
-│   ├── supermodel/
-│   ├── rmg/
-│   ├── dreamm/
-│   ├── gzdoom/
-│   ├── dosboxpure/
-│   ├── bigpemu/
-│   ├── ymir/
-│   ├── portproton/
-│   ├── antimicrox/
-│   └── README.md
+deckstation-x86_64/
+├── README.md
+├── .gitignore
+├── PKGBUILD                        # Paquete Arch (x86_64)
+├── deckstation-x86_64.install
+├── scripts/                        # Scripts del sistema
+│   ├── DeckStation.sh              # Launcher portable
+│   ├── launcher.sh                 # Launcher multi-python (Updater)
+│   ├── mapeador.py                 # Mapeador de mandos
+│   ├── selector_manual.py          # Selector manual
+│   ├── compresorKSM.sh             # Compresor de ROMs (KSM)
+│   ├── PortProton_wsquashfs.sh     # Wrapper wsquashfs para PortProton
+│   ├── run_squashfs_wrapper.sh     # Wrapper squashfs
+│   └── Gestor KSM.desktop          # Acceso directo al gestor KSM
+├── evmapy/                         # Mapeo de mandos (evmapy)
+├── configs/                        # Configs portable de emuladores
+│   ├── es-de/                      #   ES-DE: custom_systems/, settings/, scrapers/
+│   ├── retroarch/                  #   retroarch.cfg + config/ (92 sistemas)
+│   └── <emulador>/                 #   Configs por emulador
 └── docs/
-    └── INSTALACION.md             # Guía completa
+    └── INSTALACION.md
 ```
 
 ## Estructura en ejecución (`/opt/deckstation/`)
@@ -97,7 +79,6 @@ pocknix-deckstation-x86_64/        # ← SOLO x86_64
 ## Extras (vs la versión ARM)
 
 - **`launcher.sh`** — launcher multi-python con **Updater** auto-descargable
-  (Python portable standalone)
 - **`compresorKSM.sh`** + **Gestor KSM** — compresión de ROMs en contenedores
 - **`wsquashfs/`** + `run_squashfs_wrapper.sh` — sistema de compresión squashfs
 - **OpenROM** — gestor de ROMs portable
@@ -121,7 +102,7 @@ pocknix-deckstation-x86_64/        # ← SOLO x86_64
 makepkg -si
 
 # O instalar desde pre-compilado
-sudo pacman -U pocknix-deckstation-x86_64-*.pkg.tar.zst
+sudo pacman -U deckstation-x86_64-*.pkg.tar.zst
 ```
 
 ### Post-instalación
@@ -132,10 +113,9 @@ deckstation
 
 ## Licencia
 
-Proyecto parte de Pocknix — Licencia GPL v2+
+GPL v2+
 
 ## Créditos
 
-- **Pocknix**: Sistema base
-- **DeckStation**: Proyecto original (PC/x86_64)
+- **stshunz** — creador original de DeckStation (https://github.com/stshunz)
 - **Emuladores**: RetroArch, Dolphin, DuckStation, PPSSPP, RPCS3, etc.

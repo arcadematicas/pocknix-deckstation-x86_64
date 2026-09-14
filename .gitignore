@@ -1,5 +1,5 @@
 # ============================================================
-# Pocknix DeckStation x86_64 — .gitignore
+# DeckStation x86_64 — .gitignore
 # Los binarios grandes NO van en git (ROMs, Media, KSM, Apps)
 # ============================================================
 

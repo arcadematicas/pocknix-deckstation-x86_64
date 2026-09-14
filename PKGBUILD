@@ -1,15 +1,13 @@
-# Maintainer: Pocknix Team <pocknix@example.com>
-# DeckStation x86_64 — versión para PC / Steam Deck (proyecto original, más completo).
-# NO usar en ARM: existe el proyecto DeckStation ARM aparte (pocknix-deckstation).
-pkgname=pocknix-deckstation-x86_64
+# Maintainer: stshunz <https://github.com/stshunz>
+# DeckStation x86_64 — sistema de emulación portable para PC / Steam Deck.
+# Proyecto independiente. Versión ARM: deckstation-arm.
+pkgname=deckstation-x86_64
 pkgver=1.0.0
 pkgrel=1
-pkgdesc="Sistema de emulación portable para x86_64 (DeckStation PC) — integrado en Pocknix"
+pkgdesc="Sistema de emulación portable para x86_64 (PC / Steam Deck)"
 arch=('x86_64')
-url="https://github.com/arcadematicas/pocknix-deckstation-x86_64"
+url="https://github.com/arcadematicas/deckstation-x86_64"
 license=('GPL2')
-provides=('pocknix-deckstation')
-conflicts=('pocknix-deckstation')
 depends=(
     'python'
     'python-requests'
@@ -24,7 +22,7 @@ optdepends=(
 )
 source=()
 sha256sums=()
-install=pocknix-deckstation-x86_64.install
+install=deckstation-x86_64.install
 
 package() {
     # Directorio base

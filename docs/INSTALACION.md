@@ -1,4 +1,4 @@
-# Guía de Instalación — Pocknix DeckStation x86_64
+# Guía de Instalación — DeckStation x86_64
 
 ## Requisitos previos
 
@@ -16,8 +16,8 @@
 
 ```bash
 # Clonar el repo
-git clone https://github.com/arcadematicas/pocknix-deckstation-x86_64.git
-cd pocknix-deckstation-x86_64
+git clone https://github.com/arcadematicas/deckstation-x86_64.git
+cd deckstation-x86_64
 
 # Compilar el paquete
 makepkg -si
@@ -163,11 +163,11 @@ sudo rm /usr/bin/deckstation
 
 ### Con el gestor de paquetes
 ```bash
-sudo pacman -R pocknix-deckstation-x86_64
+sudo pacman -R deckstation-x86_64
 ```
 
 ## Notas finales
 
 - **No toca el sistema**: DeckStation es completamente portable
 - **Configs persistentes**: Se mantienen entre actualizaciones
-- **Versión ARM**: existe un repo hermano para aarch64 (`arcadematicas/pocknix-deckstation`)
+- **Versión ARM**: existe un repo hermano para aarch64 (`arcadematicas/deckstation-x86_64`)

@@ -1,10 +1,10 @@
-# pocknix-deckstation-x86_64.install
+# deckstation-x86_64.install
 # Hooks de instalación para el paquete (versión x86_64 / PC)
 
 post_install() {
     echo ""
     echo "=========================================="
-    echo "  Pocknix DeckStation x86_64 instalado!"
+    echo "  DeckStation x86_64 instalado!"
     echo "  (PC / Steam Deck)"
     echo "=========================================="
     echo ""
@@ -28,7 +28,7 @@ post_install() {
 post_upgrade() {
     echo ""
     echo "=========================================="
-    echo "  Pocknix DeckStation x86_64 actualizado!"
+    echo "  DeckStation x86_64 actualizado!"
     echo "=========================================="
     echo ""
     echo "Tus configs y saves se mantienen intactos."
